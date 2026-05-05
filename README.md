@@ -12,7 +12,6 @@
      📝 <a href="#notes" title="Go to about notes section">Notes</a>
     <ul>
       <li><a href="#plugins-and-tasks" title="Go to about plugins and tasks section">Plugins and Tasks</a></li>
-      <li><a href="#configuring-task-properties" title="Go to about configuring task properties section">Configuring Task Properties</a></li>
     </ul>
   </li>
   <li>📖 <a href="#references" title="Go to about references section">References</a></li>
@@ -33,9 +32,9 @@ dpeuniversity.gradle.com</a>.
 It is possible to configure Gradle build environment defining Gradle properties in a `gradle.properties` file in
 different locations with different precedences.
 
-Useful links:
+The instructor suggests running more specific tasks.
 
-- https://docs.gradle.org/current/userguide/build_environment.html
+Lifecycle tasks are group of tasks without actions or outputs. They mostly contain a group of pre-requisite tasks.
 
 Useful commands:
 
@@ -50,19 +49,13 @@ Useful commands:
 ./gradlew :app:compileJava
 ```
 
-The instructor suggests running more specific tasks.
-
-<a href="#table-of-contents" title="Go to table of contents">Back to Top</a>
-
-<h3 id="configuring-task-properties">Configuring Task Properties</h3>
-
-Lifecycle tasks are group of tasks without actions or outputs. They contain mostly a group of pre-requisite tasks.
-
 Useful links:
 
+- https://docs.gradle.org/current/userguide/build_environment.html
 - https://docs.gradle.org/current/userguide/java_plugin.html#java_plugin
 - https://docs.gradle.org/current/dsl/org.gradle.api.tasks.compile.JavaCompile.html
 - https://docs.gradle.org/current/dsl/org.gradle.api.tasks.compile.CompileOptions.html
+- https://plugins.gradle.org
 
 <a href="#table-of-contents" title="Go to table of contents">Back to Top</a>
 
