@@ -9,9 +9,10 @@
 <ul>
   <li>❓ <a href="#about" title="Go to about section">About</a></li>
   <li>
-     📝 <a href="#notes" title="Go to about notes section">Notes</a>
+     📝 <a href="#notes" title="Go to notes section">Notes</a>
     <ul>
-      <li><a href="#plugins-and-tasks" title="Go to about plugins and tasks section">Plugins and Tasks</a></li>
+      <li><a href="#plugins-and-tasks" title="Go to plugins and tasks section">Plugins and Tasks</a></li>
+      <li><a href="#dependency-management" title="Go to dependency management section">Dependency Management</a></li>
     </ul>
   </li>
   <li>📖 <a href="#references" title="Go to about references section">References</a></li>
@@ -59,6 +60,22 @@ Useful links:
 - https://docs.gradle.org/current/dsl/org.gradle.api.tasks.compile.JavaCompile.html
 - https://docs.gradle.org/current/dsl/org.gradle.api.tasks.compile.CompileOptions.html
 - https://plugins.gradle.org
+
+<a href="#table-of-contents" title="Go to table of contents">Back to Top</a>
+
+<h3 id="dependency-management">Dependency Management</h3>
+
+The common types are `implementation`, `api`, `compileOnly`, `runtimeOnly`. And for tests are `testImplementation`,
+`testCompileOnly`, `testRuntimeOnly`.
+
+The `api` is for public APIs and the `implementation` is for internal projects.
+
+When defined an `api`, the dependencies appear in the `compileClasspath` and `runtimeClasspath` configurations. While
+that the `implementation` dependencies appear only in the `runtimeClasspath`.
+
+Useful links:
+
+- https://plugins.gradle.org/plugin/com.autonomousapps.dependency-analysis
 
 <a href="#table-of-contents" title="Go to table of contents">Back to Top</a>
 
