@@ -47,6 +47,9 @@ Useful commands:
 
 # compile a task specifically for a [sub]project.
 ./gradlew :app:compileJava
+
+# list all dependencies
+./gradlew :app:dependencies
 ```
 
 Useful links:
