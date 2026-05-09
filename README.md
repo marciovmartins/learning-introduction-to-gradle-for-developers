@@ -73,6 +73,15 @@ The `api` is for public APIs and the `implementation` is for internal projects.
 When defined an `api`, the dependencies appear in the `compileClasspath` and `runtimeClasspath` configurations. While
 that the `implementation` dependencies appear only in the `runtimeClasspath`.
 
+The dependency version can be defined as follows:
+
+- a regular version means "at least" that version. E.g.: implementation("groupId:moduleId:2.4")
+  - the version 2.4 or newer will be used in case another dependency is using a newer version.
+  - Gradle will use the latest found version.
+- use "!!" to be explict about the version. E.g.: implementation("groupId:moduleId:version!!")
+- use "+" to use the newest version existing. E.g.: implementation("groupId:moduleId:2.+")
+  - Gradle will look for the newest version in "2.x".
+
 Useful links:
 
 - https://plugins.gradle.org/plugin/com.autonomousapps.dependency-analysis
