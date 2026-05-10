@@ -3,5 +3,5 @@ plugins {
     id("com.autonomousapps.build-health") version "3.10.0"
 }
 
-rootProject.name = "introduction-to-gradle-for-developers"
+rootProject.name = "Introduction-to-Gradle-for-Developers"
 include("model", "app")
