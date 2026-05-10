@@ -13,8 +13,7 @@ dependencies {
     implementation(libs.guava)
 
     testImplementation(libs.junit.jupiter)
-    testImplementation(libs.mockito.core)
-    testImplementation(libs.mockito.junit.jupiter)
+    testImplementation(libs.bundles.mockito)
 
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
