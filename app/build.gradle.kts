@@ -12,7 +12,9 @@ dependencies {
     implementation(project(":model"))
     implementation(libs.guava)
 
-    testImplementation("org.junit.jupiter:junit-jupiter-api:6.0.1")
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.junit.jupiter)
 
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }

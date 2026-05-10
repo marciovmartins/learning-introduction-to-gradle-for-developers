@@ -7,9 +7,9 @@ repositories {
 }
 
 dependencies {
-    api("com.google.guava:guava:32.1.2-jre")
+    api(libs.guava)
 
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.10.0")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 tasks.named<Test>("test") {
