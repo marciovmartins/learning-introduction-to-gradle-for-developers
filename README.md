@@ -84,6 +84,12 @@ The dependency version can be defined as follows:
 
 There is a version catalogue that can be defined in `gradle/libs.version.toml`. There it is defined `versios`, `libs`, `bundles` and `plugins` that are available in build.gradle.kts.
 
+Useful commands:
+
+```shell
+./gradlew :app:dependencies --configuration=runtimeClasspath
+```
+
 Useful links:
 
 - https://plugins.gradle.org/plugin/com.autonomousapps.dependency-analysis

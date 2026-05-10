@@ -1,19 +1,30 @@
 package org.example;
 
-import com.google.common.collect.ImmutableSet;
-import org.example.model.Data;
+import com.google.api.client.http.GenericUrl;
+import com.google.api.client.http.HttpRequest;
+import com.google.api.client.http.HttpRequestFactory;
+import com.google.api.client.http.javanet.NetHttpTransport;
+
+import java.io.IOException;
 
 public class App {
     public String getGreeting() {
-        return "Hello World!!";
+        return "Hello World!";
     }
 
-    static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+    public String getUrl() {
+        // This is a small website and easily prints.
+        return "https://wiby.me/";
+    }
 
-        ImmutableSet<String> names = Data.COLOR_NAMES;
-        for (String name : names) {
-            System.out.println(name);
-        }
+    static void main() throws IOException {
+        App app = new App();
+        System.out.println(app.getGreeting());
+
+        HttpRequestFactory requestFactory = new NetHttpTransport().createRequestFactory();
+        HttpRequest request = requestFactory.buildGetRequest(new GenericUrl(app.getUrl()));
+        String rawResponse = request.execute().parseAsString();
+        System.out.println("\n---------\n");
+        System.out.println(rawResponse);
     }
 }

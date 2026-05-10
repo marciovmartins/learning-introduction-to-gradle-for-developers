@@ -11,6 +11,7 @@ repositories {
 dependencies {
     implementation(project(":model"))
     implementation(libs.guava)
+    implementation(libs.google.http.client)
 
     testImplementation(libs.junit.jupiter)
     testImplementation(libs.bundles.mockito)
