@@ -1,6 +1,6 @@
 <!--suppress HtmlUnknownAnchorTarget -->
 
-# Learning "Introduction to Gradle for Java Developers"
+# DPE University: Learning Gradle
 
 <a href="https://gradle.org/" title="Go to gradle.org website"><img alt="Gradle icon" src="../docs/assets/gradle.svg" width="25"/></a>
 
@@ -13,6 +13,7 @@
     <ul>
       <li><a href="#plugins-and-tasks" title="Go to plugins and tasks section">Plugins and Tasks</a></li>
       <li><a href="#dependency-management" title="Go to dependency management section">Dependency Management</a></li>
+      <li><a href="#tasks" title="Go to tasks section">Tasks</a></li>
     </ul>
   </li>
   <li>📖 <a href="#references" title="Go to about references section">References</a></li>
@@ -22,7 +23,9 @@
 
 Hands-on training for Java developers to learn about Gradle with the course
 at <a href="https://dpeuniversity.gradle.com/app/courses/012de84f-fcd3-45d4-9c4c-284382eb3f3f" title="Go to the course page">
-dpeuniversity.gradle.com</a>.
+Introduction to Gradle for Java Developers</a>
+and <a href="https://dpeuniversity.gradle.com/app/courses/03256bfb-c0b8-4402-9af0-377e90dab72e" title="Go to DPE University course">
+Introduction to Gradle for Build Engineers</a>.
 
 <a href="#table-of-contents" title="Go to table of contents">Back to Top</a>
 
@@ -82,7 +85,8 @@ The dependency version can be defined as follows:
 - use "+" to use the newest version existing. E.g.: implementation("groupId:moduleId:2.+")
   - Gradle will look for the newest version in "2.x".
 
-There is a version catalogue that can be defined in `gradle/libs.version.toml`. There it is defined `versions`, `libs`, `bundles` and `plugins` that are available in build.gradle.kts.
+There is a version catalogue that can be defined in `gradle/libs.version.toml`. There it is defined `versions`, `libs`,
+`bundles` and `plugins` that are available in build.gradle.kts.
 
 Useful commands:
 
@@ -93,6 +97,14 @@ Useful commands:
 Useful links:
 
 - https://plugins.gradle.org/plugin/com.autonomousapps.dependency-analysis
+
+<a href="#table-of-contents" title="Go to table of contents">Back to Top</a>
+
+<h3 id="tasks">Tasks</h3>
+
+The Gradle Lifecycle is composed of `initialisation`, `configuration` and `execution`.
+
+Tasks are `execution` units, and TaskTypes are the "templates" used to configure the task for execution.
 
 <a href="#table-of-contents" title="Go to table of contents">Back to Top</a>
 

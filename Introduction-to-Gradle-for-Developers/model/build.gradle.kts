@@ -9,7 +9,7 @@ repositories {
 dependencies {
     api(libs.guava)
 
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    testRuntimeOnly(libs.junit.platform.launcher)
 }
 
 tasks.named<Test>("test") {
