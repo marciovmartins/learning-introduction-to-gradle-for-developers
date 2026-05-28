@@ -36,3 +36,14 @@ tasks.named<Test>("test") {
 tasks.named<JavaCompile>("compileJava") {
 //    options.isDebug = false
 }
+
+abstract class HelloTask : DefaultTask() {
+    @TaskAction
+    fun action() {
+        println("hello world!")
+    }
+}
+
+tasks.register<HelloTask>("hello") {
+    description = "Prints a Hello World greeting."
+}
