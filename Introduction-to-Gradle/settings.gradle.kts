@@ -3,5 +3,5 @@ plugins {
     id("com.autonomousapps.build-health") version "3.10.0"
 }
 
-rootProject.name = "Introduction-to-Gradle-for-Developers"
+rootProject.name = "Introduction-to-Gradle"
 include("model", "app")
