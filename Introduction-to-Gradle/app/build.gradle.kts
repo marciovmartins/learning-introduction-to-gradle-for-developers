@@ -44,18 +44,24 @@ abstract class HelloTask : DefaultTask() {
     @get:Input
     abstract val str: Property<String>
 
+    @get:OutputFile
+    abstract val outFile: RegularFileProperty
+
     init {
         str.convention("hello world!")
     }
 
-
     @TaskAction
     fun action() {
         println(str.get())
+        val theFile = outFile.get().asFile
+        theFile.createNewFile()
+        theFile.writeText(str.get())
     }
 }
 
 tasks.register<HelloTask>("hello") {
     description = "Prints a Hello World greeting."
+    outFile = layout.buildDirectory.file("hello.txt")
     str = "hi there!"
 }
