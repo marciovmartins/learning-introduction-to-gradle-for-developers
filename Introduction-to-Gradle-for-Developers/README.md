@@ -82,7 +82,7 @@ The dependency version can be defined as follows:
 - use "+" to use the newest version existing. E.g.: implementation("groupId:moduleId:2.+")
   - Gradle will look for the newest version in "2.x".
 
-There is a version catalogue that can be defined in `gradle/libs.version.toml`. There it is defined `versios`, `libs`, `bundles` and `plugins` that are available in build.gradle.kts.
+There is a version catalogue that can be defined in `gradle/libs.version.toml`. There it is defined `versions`, `libs`, `bundles` and `plugins` that are available in build.gradle.kts.
 
 Useful commands:
 
