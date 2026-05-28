@@ -38,9 +38,12 @@ tasks.named<JavaCompile>("compileJava") {
 }
 
 abstract class HelloTask : DefaultTask() {
+    @Input
+    var str: String = "hello world!"
+
     @TaskAction
     fun action() {
-        println("hello world!")
+        println(str)
     }
 }
 
