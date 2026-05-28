@@ -49,4 +49,5 @@ abstract class HelloTask : DefaultTask() {
 
 tasks.register<HelloTask>("hello") {
     description = "Prints a Hello World greeting."
+    str = "hi there!"
 }
