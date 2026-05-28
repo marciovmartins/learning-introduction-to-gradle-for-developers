@@ -2,7 +2,7 @@
 
 # Learning "Introduction to Gradle for Java Developers"
 
-<a href="https://gradle.org/" title="Go to gradle.org website"><img alt="Gradle icon" src="./docs/assets/gradle.svg" width="25"/></a>
+<a href="https://gradle.org/" title="Go to gradle.org website"><img alt="Gradle icon" src="../docs/assets/gradle.svg" width="25"/></a>
 
 <h2 id="table-of-contents">⤴️ Table of Contents</h2>
 
