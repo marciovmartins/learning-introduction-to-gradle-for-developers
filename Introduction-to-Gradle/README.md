@@ -104,6 +104,8 @@ The Gradle Lifecycle is composed of `initialisation`, `configuration` and `execu
 
 Tasks are `execution` units, and TaskTypes are the "templates" used to configure the task for execution.
 
+Use strongly typed RegularFile and Directory classes instead of java.io.File.
+
 <a href="#table-of-contents" title="Go to table of contents">Back to Top</a>
 
 <h2 id="references">📖 References</h2>
