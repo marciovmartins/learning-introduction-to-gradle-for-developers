@@ -38,16 +38,20 @@ tasks.named<JavaCompile>("compileJava") {
 }
 
 abstract class HelloTask : DefaultTask() {
-    @Input
-    var str: String = "hello world!"
+    @get:Input
+    abstract val str: Property<String>
+
+    init {
+        str.convention("hello world!")
+    }
+
 
     @TaskAction
     fun action() {
-        println(str)
+        println(str.get())
     }
 }
 
 tasks.register<HelloTask>("hello") {
     description = "Prints a Hello World greeting."
-    str = "hi there!"
 }
