@@ -38,6 +38,9 @@ tasks.named<JavaCompile>("compileJava") {
 }
 
 abstract class HelloTask : DefaultTask() {
+    // @Input var str: String = "hello world!"
+
+    // Lazy load
     @get:Input
     abstract val str: Property<String>
 
