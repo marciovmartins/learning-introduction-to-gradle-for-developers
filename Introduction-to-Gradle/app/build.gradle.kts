@@ -64,6 +64,9 @@ tasks.register<HelloTask>("hello") {
     description = "Prints a Hello World greeting."
     outFile = layout.buildDirectory.file("hello.txt")
     str = "hi there!"
+
+    doFirst { println("doFirst: executes before the action") }
+    doLast { println("doLast: executes after the action") }
 }
 
 tasks.named("hello") {
