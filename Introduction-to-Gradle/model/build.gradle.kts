@@ -19,3 +19,8 @@ tasks.named<Test>("test") {
 tasks.named<JavaCompile>("compileJava") {
 //    options.isDebug = false
 }
+
+tasks.register<PrintString>("printGoodbye") {
+    description = "Prints goodbye"
+    str = "goodbye!"
+}

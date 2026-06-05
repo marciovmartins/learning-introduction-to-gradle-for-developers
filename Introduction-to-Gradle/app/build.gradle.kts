@@ -88,3 +88,8 @@ tasks.register<Zip>("zipTestResults") {
 tasks.named("test") {
     finalizedBy("zipTestResults")
 }
+
+tasks.register<PrintString>("printHello") {
+    description = "Prints hello"
+    str = "hello!"
+}
