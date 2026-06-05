@@ -66,9 +66,14 @@ tasks.register<HelloTask>("hello") {
     str = "hi there!"
 }
 
+tasks.named("hello") {
+    group = "Demo"
+}
+
 tasks.register<Zip>("zipTestResults") {
 //    dependsOn("test")
     description = "Compress in a zip file the test-results"
+    group = "distribution"
     archiveFileName = "test-results.zip"
     destinationDirectory = layout.buildDirectory
 
