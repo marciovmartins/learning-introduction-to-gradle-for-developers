@@ -66,10 +66,17 @@ tasks.register<HelloTask>("hello") {
     str = "hi there!"
 }
 
-tasks.register<Zip>("testCreatingArchive") {
+tasks.register<Zip>("zipTestResults") {
+//    dependsOn("test")
     description = "Compress in a zip file the test-results"
     archiveFileName = "test-results.zip"
     destinationDirectory = layout.buildDirectory
 
-    from(layout.buildDirectory.dir("test-results"))
+//    from(layout.buildDirectory.dir("test-results"))
+    from(tasks.named("test"))
+    include("**/*.xml")
+}
+
+tasks.named("test") {
+    finalizedBy("zipTestResults")
 }
