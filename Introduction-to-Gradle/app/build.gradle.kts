@@ -67,6 +67,7 @@ tasks.register<HelloTask>("hello") {
 }
 
 tasks.register<Zip>("testCreatingArchive") {
+    description = "Compress in a zip file the test-results"
     archiveFileName = "test-results.zip"
     destinationDirectory = layout.buildDirectory
 
