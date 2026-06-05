@@ -65,3 +65,10 @@ tasks.register<HelloTask>("hello") {
     outFile = layout.buildDirectory.file("hello.txt")
     str = "hi there!"
 }
+
+tasks.register<Zip>("testCreatingArchive") {
+    archiveFileName = "test-results.zip"
+    destinationDirectory = layout.buildDirectory
+
+    from(layout.buildDirectory.dir("test-results"))
+}
